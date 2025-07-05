@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Secret Diary</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="login-screen" class="centered">
+    <h2>Enter Password</h2>
+    <input type="password" id="password-input" placeholder="Password">
+    <button onclick="checkPassword()">Unlock</button>
+    <p id="login-error" class="error"></p>
+  </div>
+
+  <div id="diary-app" class="hidden">
+    <header>
+      <h1>My Secret Diary</h1>
+      <button onclick="changePassword()">Change Password</button>
+    </header>
+
+    <section id="entry-form">
+      <textarea id="diary-text" placeholder="What's on your mind?"></textarea>
+      <button onclick="saveEntry()">Save Entry</button>
+    </section>
+
+    <section id="entries">
+      <h2>Your Entries</h2>
+      <div id="entry-cards" class="card-container"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
